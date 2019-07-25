@@ -15,10 +15,17 @@ public class ControlFlowExercises {
 
     public static void main(String[] args) {
 //        fizzBuzz(45);
-        int i = 5;
-        while (i <= 15) {
-            System.out.println("i is " + i);
-            i++;
-        }
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.println("i is " + i);
+//            i++;
+//        }
+        int i;
+//      for (i=2; i <= 100; i +=2) {
+//          System.out.println(i);
+//      }
+         for (i = 2; i <= 1000000; i *=2) {
+             System.out.println(i);
+         }
     }
 }
