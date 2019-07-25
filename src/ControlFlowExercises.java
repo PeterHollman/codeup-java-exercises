@@ -16,25 +16,27 @@ public class ControlFlowExercises {
     }
 
     public static void main(String[] args) {
-//        fizzBuzz(45);
-//        int i = 5;
-//        while (i <= 15) {
-//            System.out.println("i is " + i);
-//            i++;
-//        }
-        int i;
-//      for (i=2; i <= 100; i +=2) {
-//          System.out.println(i);
-//      }
-//         for (i = 2; i <= 1000000; i *=2) {
-//             System.out.println(i);
-//         }
+        fizzBuzz(45);
+        int i = 5;
+        while (i <= 15) {
+            System.out.println("i is " + i);
+            i++;
+        }
+        int j;
+      for (j=2; j <= 100; j +=2) {
+          System.out.println(i);
+      }
+      int k;
+         for (k = 2; k <= 1000000; k *=2) {
+             System.out.println(i);
+         }
 
         // Exercise 3
 
         Scanner theNumber = new Scanner(System.in);
         System.out.println("Please enter an Integer");
         int numTable = theNumber.nextInt();
+        int l;
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Continue? [y/N] ");
@@ -43,9 +45,35 @@ public class ControlFlowExercises {
         if(confirmation){
             System.out.println("Here is your table!");
             System.out.println("number | squared | cubed");
-            for(i = 1; i <= numTable; i++){
-                System.out.println(i + "  |" + (i * i) + "  |" + (i * i * i));
+            for(l = 1; l <= numTable; l++){
+                System.out.println(l + "  |" + (l * l) + "  |" + (l * l * l));
             }
         }
+
+        //Exercise 4
+
+        Scanner theGradeScan = new Scanner(System.in);
+        System.out.println("Please enter the Grade you got");
+        int theGrade = theGradeScan.nextInt();
+
+
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Would you like your grade [y/N] ");
+        String userInput = sc2.next();
+        boolean newConfirmation = userInput.equals("y");
+        if(newConfirmation){
+            if(theGrade >= 90){
+                System.out.println("You got an A!");
+            } else if(theGrade >= 80){
+                System.out.println("You got a B!");
+            } else if(theGrade >= 70){
+                System.out.println("You got a C!");
+            } else if(theGrade >= 60){
+                System.out.println("You got a D!");
+            } else{
+                System.out.println("You got a F!");
+            }
+        }
+
     }
 }
