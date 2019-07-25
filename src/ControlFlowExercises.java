@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     static void fizzBuzz(int num)  {
         for (int i=1; i<= num; i++)  {
@@ -24,8 +26,26 @@ public class ControlFlowExercises {
 //      for (i=2; i <= 100; i +=2) {
 //          System.out.println(i);
 //      }
-         for (i = 2; i <= 1000000; i *=2) {
-             System.out.println(i);
-         }
+//         for (i = 2; i <= 1000000; i *=2) {
+//             System.out.println(i);
+//         }
+
+        // Exercise 3
+
+        Scanner theNumber = new Scanner(System.in);
+        System.out.println("Please enter an Integer");
+        int numTable = theNumber.nextInt();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Continue? [y/N] ");
+        String userInput = sc.next();
+        boolean confirmation = userInput.equals("y");
+        if(confirmation){
+            System.out.println("Here is your table!");
+            System.out.println("number | squared | cubed");
+            for(i = 1; i <= numTable; i++){
+                System.out.println(i + "  |" + (i * i) + "  |" + (i * i * i));
+            }
+        }
     }
 }
