@@ -16,20 +16,20 @@ public class ControlFlowExercises {
     }
 
     public static void main(String[] args) {
-        fizzBuzz(45);
-        int i = 5;
-        while (i <= 15) {
-            System.out.println("i is " + i);
-            i++;
-        }
-        int j;
-      for (j=2; j <= 100; j +=2) {
-          System.out.println(i);
-      }
-      int k;
-         for (k = 2; k <= 1000000; k *=2) {
-             System.out.println(i);
-         }
+//        fizzBuzz(45);
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.println("i is " + i);
+//            i++;
+//        }
+//        int j;`
+//      for (j=2; j <= 100; j +=2) {
+//          System.out.println(i);
+//      }
+//      int k;
+//         for (k = 2; k <= 1000000; k *=2) {
+//             System.out.println(i);
+//         }
 
         // Exercise 3
 
@@ -59,8 +59,8 @@ public class ControlFlowExercises {
 
         Scanner sc2 = new Scanner(System.in);
         System.out.print("Would you like your grade [y/N] ");
-        String userInput = sc2.next();
-        boolean newConfirmation = userInput.equals("y");
+        String userInput2 = sc2.next();
+        boolean newConfirmation = userInput2.equals("y");
         if(newConfirmation){
             if(theGrade >= 90){
                 System.out.println("You got an A!");
