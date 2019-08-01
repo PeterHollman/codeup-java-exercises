@@ -1,7 +1,7 @@
 package util;
-import util.Input.*;
 
 
+import static util.Input.*;
 
 public class InputTest {
     public static void main(String[] args) {
