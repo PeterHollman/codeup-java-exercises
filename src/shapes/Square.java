@@ -1,6 +1,6 @@
 package shapes;
 
-public class Square extends Quadrilateral implements Measureables {
+public class Square extends Quadrilateral implements Measureable {
 
     public Square(double length, double width) {
         super(length, width);
