@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class student {
 
     private String name;
-    private ArrayList<Integer> grades;
+    protected ArrayList<Integer> grades;
 
     public student(String name) {
         this.name = name;
@@ -34,15 +34,4 @@ public class student {
         return total / grades.size();
     }
 
-
-
-    public static void main(String[] args) {
-
-        student peter = new student("Peter");
-        peter.addGrade(95);
-        System.out.println(peter.grades);
-        peter.addGrade(93);
-        System.out.println(peter.grades);
-        System.out.println(peter.getGradeAverage());
-    }
 }
