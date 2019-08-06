@@ -10,8 +10,6 @@ public class CommandLineInterface {
         peter.addGrade(95);
         peter.addGrade(93);
         peter.addGrade(99);
-        System.out.println(peter.grades);
-        System.out.println(peter.getGradeAverage());
 
         student inara = new student("Inara");
         inara.addGrade(100);
@@ -50,15 +48,19 @@ do {
             if(userInput.toLowerCase().contains("peter")){
                 System.out.println("Peter's grades are:");
                 System.out.println(peter.grades);
+                System.out.println("Peter's average is = " + peter.getGradeAverage());
             } else if(userInput.toLowerCase().contains("inara")){
                 System.out.println("Inara's grades are:");
                 System.out.println(inara.grades);
+                System.out.println("Inara's average is = " + inara.getGradeAverage());
             } else if(userInput.toLowerCase().contains("wash")){
                 System.out.println("Wash's grades are");
                 System.out.println(wash.grades);
+                System.out.println("Wash's average is = " + wash.getGradeAverage());
             } else if(userInput.toLowerCase().contains("mal")){
                 System.out.println("Malcolm's grades are:");
                 System.out.println(mal.grades);
+                System.out.println("Malcolm's average is = " + mal.getGradeAverage());
             } else{
                 System.out.println("That's not one of our students, try again");
             }
