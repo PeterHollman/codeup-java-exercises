@@ -1,8 +1,9 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Input {
+public class Input  {
     private Scanner scanner;
 
     public static String getString(){
@@ -21,22 +22,36 @@ public class Input {
         System.out.println(confirmation);
         return confirmation;
     }
-    public static int getInt(){
-        System.out.println("Enter a number");
+public static int getInt(){
+    int number;
+
+    try {
+        System.out.println("Give me a number");
         Scanner scanner = new Scanner(System.in);
-        int theInt = scanner.nextInt();
-        System.out.println("You entered " + theInt);
-        return theInt;
-    }
-    public static double getDouble() {
-        System.out.println("Enter a fraction");
-        Scanner scanner = new Scanner(System.in);
-        double theDouble = scanner.nextDouble();
-        System.out.println("You entered " + theDouble);
-        return theDouble;
+        number = scanner.nextInt();
+    } catch (InputMismatchException nfe){
+        System.out.println("Input is not a number, please put in a number");
+        return getInt();
     }
 
-    public static int getInt(int min, int max) {
+    return number;
+}
+
+
+    public static double getDouble() {
+        try {
+            System.out.println("Enter a number with a decimal");
+            Scanner scanner = new Scanner(System.in);
+            double theDouble = scanner.nextDouble();
+            System.out.println("You entered " + theDouble);
+            return theDouble;
+        } catch (InputMismatchException e){
+            System.out.println("You didn't enter a number. Please put in a number");
+            return getDouble();
+        }
+    }
+
+    public static int getInt(int min, int max)  {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number between " + min + " and " + max);
         do {
@@ -56,7 +71,7 @@ public class Input {
     }
 
 
-    public static double getDouble(double min, double max) {
+    public static double getDouble(double min, double max) throws NumberFormatException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number between " + min + " and " + max);
         do {
@@ -75,6 +90,33 @@ public class Input {
         } while(true);
     }
 
+    public static int getBinary(){
+            System.out.println("Enter a number in binary");
+        try{
+            Scanner scanner = new Scanner(System.in);
+            String userInput = scanner.next();
+            int binaryInput = Integer.valueOf(userInput, 2);
+            System.out.println("Your number in base 10 is: " + binaryInput);
+            return binaryInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number in binary.  Only  use '1s' and '0s'");
+            return getBinary();
+        }
+    }
+    public static int getHex(){
+        System.out.println("Enter a number in Hexadecimal");
+        try{
+            Scanner scanner = new Scanner(System.in);
+            String userInput = scanner.next();
+            int hexInput = Integer.valueOf(userInput, 16);
+            System.out.println("Your number in base 10 is: " + hexInput);
+            return hexInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number in hexadecimal");
+            return getBinary();
+        }
+    }
+
 public static void main(String[] args) {
     getString();
     yesNo();
@@ -82,6 +124,9 @@ public static void main(String[] args) {
     getDouble(0.5, 2.5);
     getDouble();
     getInt(1,10);
+    getBinary();
+    getHex();
+
 }
 
 }

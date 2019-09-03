@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class ArraysExercises {
 
+
     private static Person[] addPerson(Person[] group, Person newMember){
         Person[] newGroup = Arrays.copyOf(group, group.length + 1);
         newGroup[newGroup.length-1] = newMember;
